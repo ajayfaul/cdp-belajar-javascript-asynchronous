@@ -25,6 +25,51 @@ const requestPromise = (url) => {
 };
 
 
+requestPromise('movie.com')
+    .then((response) => {
+        console.log('success', response);
+    })
+    .catch((error) => {
+        console.log('error', error);
+    });
+
+// promise callback version
+// requestPromise('movie.com')
+// 	.then((response) => {
+// 		console.log('success', response);
+// 		requestPromise('movie.com')
+// 			.then((response) => {
+// 				console.log('success', response);
+// 				requestPromise('movie.com')
+// 					.then((response) => {
+// 						console.log('success', response);
+// 						requestPromise('movie.com')
+// 							.then((response) => {
+// 								console.log('success', response);
+// 								requestPromise('movie.com')
+// 									.then((response) => {
+// 										console.log('success', response);
+// 									})
+// 									.catch((error) => {
+// 										console.log('error', error);
+// 									});
+// 							})
+// 							.catch((error) => {
+// 								console.log('error', error);
+// 							});
+// 					})
+// 					.catch((error) => {
+// 						console.log('error', error);
+// 					});
+// 			})
+// 			.catch((error) => {
+// 				console.log('error', error);
+// 			});
+// 	})
+// 	.catch((error) => {
+// 		console.log('error', error);
+// 	});
+
 // requestCallback(
 // 	'movie.com',
 // 	function (response) {
