@@ -24,6 +24,16 @@ const requestPromise = (url) => {
     });
 };
 
+// mengelola kondisi error dengan aync await
+async function requestHandler() {
+    try {
+        let result = await requestPromise('movie.com');
+        console.log(result);
+    } catch (error) {
+        console.log('Error:', error);
+    }
+}
+
 // cara benar menggunakan fungsi promise
 // requestPromise('movie.com').then((result) => {
 //     console.log(result);
